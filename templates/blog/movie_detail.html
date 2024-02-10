@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="Μovie">
+      <h2><a href="">{{ movie.title }}</a></h2>
+      <p>
+         {% if movie.image %}
+            <img src="/media/{{ movie.image.name }}" alt="{{ movie.title }}" width="500" height="300">
+         {% endif %} 
+      </p>
+      <p>Duration: {{ movie.duration }} minutes</p>
+      <p>Movie Type: {{ movie.movie_type.name }}</p>
+      <p>Released on: {{ movie.release_date }}</p>
+      <p>IMDb Rating: {{ movie.imdb_rating }}</p>
+      <p>Director: {{ movie.director }}</p>
+      <p>Stars: {% for star in movie.stars.all %}{{ star.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+      <p>My Rating: {{ movie.my_rating }}</p>
+      <p>Summary: {{ movie.summary }}</p>
+      <p>
+         IMDb URL: <a href="{{ movie.imdb_url }}" target="_blank">{{ movie.imdb_url }}</a>
+      <p>
+     </div>
+{% endblock %}

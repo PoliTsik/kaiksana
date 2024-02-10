@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-v#n_0i!49makuzq!mikl+(nfjz0$v&@a20o1a@&=*#9pk1!+(5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.pythonanywhere.com']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -104,9 +105,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'el-gr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Athens'
 
 USE_I18N = True
 
@@ -122,3 +123,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+import os
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR / "media")
+
