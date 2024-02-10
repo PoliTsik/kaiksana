@@ -19,5 +19,13 @@
       <p>
          IMDb URL: <a href="{{ movie.imdb_url }}" target="_blank">{{ movie.imdb_url }}</a>
       <p>
+      <p>Your Rating: 
+        <input type="number" step="0.1" min="0" max="10" name="user_rating" value="{{ movie.user_rating }}">
+      </p>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name="submit_button" value="Submit" disabled>
+      </form>
      </div>
 {% endblock %}

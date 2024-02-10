@@ -4,10 +4,10 @@ from .models import Movie
 
 
 def movie_list(request):
-    rating_filter = request.GET.get('rating', '')
-    release_date_filter = request.GET.get('release_date', '')
-    movie_type_filter = request.GET.get('movie_type', '')
-    director_filter = request.GET.get('director', '')
+    rating_filter = request.GET.get('rating_filter', '')
+    release_date_filter = request.GET.get('release_date_filter', '')
+    movie_type_filter = request.GET.get('movie_type_filter', '')
+    director_filter = request.GET.get('director_filter', '')
     search_query = request.GET.get('txt', '')
 
     movies = Movie.objects.filter(release_date__lte=timezone.now())

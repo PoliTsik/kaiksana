@@ -14,16 +14,16 @@
 <form method="GET" action="{% url 'movie_list' %}">
     <label for="rating_filter">IMDb Rating:</label>
       <select name="rating_filter">
-         <option value="all" {% if request.GET.rating_filter == 'all' %}selected{% endif %}>All Ratings</option>
-         <option value="desc" {% if request.GET.rating_filter == 'desc' %}selected{% endif %}>Descending</option>
-         <option value="asc" {% if request.GET.rating_filter == 'asc' %}selected{% endif %}>Ascending</option>
+         <option value="all" {% if request.GET.rating_filter == 'all' %}selected{% endif %}>Όλες τις Βαθ/γίες</option>
+         <option value="desc" {% if request.GET.rating_filter == 'desc' %}selected{% endif %}>Φθήνουσα</option>
+         <option value="asc" {% if request.GET.rating_filter == 'asc' %}selected{% endif %}>Αύξουσα</option>
       </select>
 
     <label for="release_date_filter">Release Date:</label>
       <select name="release_date_filter">
-        <option value="all" {% if request.GET.release_date_filter == 'all' %}selected{% endif %}>All Dates</option>
-        <option value="desc" {% if request.GET.release_date_filter == 'desc' %}selected{% endif %}>Descending</option>
-        <option value="asc" {% if request.GET.release_date_filter == 'asc' %}selected{% endif %}>Ascending</option>
+        <option value="all" {% if request.GET.release_date_filter == 'all' %}selected{% endif %}>Όλες τις Ημ/νίες</option>
+        <option value="desc" {% if request.GET.release_date_filter == 'desc' %}selected{% endif %}>Φθήνουσα</option>
+        <option value="asc" {% if request.GET.release_date_filter == 'asc' %}selected{% endif %}>Αύξουσα</option>
       </select>
 
     <label for="movie_type_filter">Movie Type:</label>

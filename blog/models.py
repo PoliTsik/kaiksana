@@ -36,7 +36,7 @@ class Movie(models.Model):
     imdb_rating = models.FloatField()
     my_rating = models.FloatField()
     summary = models.TextField()
-
+    user_rating = models.FloatField(null=True, blank=True)
     def __str__(self):
         return self.title
 
