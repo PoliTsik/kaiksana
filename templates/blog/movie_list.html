@@ -1,0 +1,59 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="row row2">
+    <div class="col-sm-2">Αναζήτηση</div>
+    <div class="col-sm-8">
+        <form method="get" action="{% url 'movie_list' %}">
+            <input type="text" name="txt">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+
+<form method="GET" action="{% url 'movie_list' %}">
+    <label for="rating_filter">IMDb Rating:</label>
+      <select name="rating_filter">
+         <option value="all" {% if request.GET.rating_filter == 'all' %}selected{% endif %}>All Ratings</option>
+         <option value="desc" {% if request.GET.rating_filter == 'desc' %}selected{% endif %}>Descending</option>
+         <option value="asc" {% if request.GET.rating_filter == 'asc' %}selected{% endif %}>Ascending</option>
+      </select>
+
+    <label for="release_date_filter">Release Date:</label>
+      <select name="release_date_filter">
+        <option value="all" {% if request.GET.release_date_filter == 'all' %}selected{% endif %}>All Dates</option>
+        <option value="desc" {% if request.GET.release_date_filter == 'desc' %}selected{% endif %}>Descending</option>
+        <option value="asc" {% if request.GET.release_date_filter == 'asc' %}selected{% endif %}>Ascending</option>
+      </select>
+
+    <label for="movie_type_filter">Movie Type:</label>
+    <select name="movie_type_filter">
+      <option value="">-- All Types --</option>
+      {% for movie_type in movie_types %}
+            <option value="{{ movie_type }}" {% if movie_type == request.GET.movie_type_filter %}selected{% endif %}>
+                {{ movie_type }}
+        </option>
+      {% endfor %}
+    </select>
+  
+
+    <label for="director_filter">Director:</label>
+    <select name="director_filter">
+      <option value="">-- All Directors --</option>
+      {% for director in directors %}
+            <option value="{{ director }}" {% if director == request.GET.director_filter %}selected{% endif %}>
+                {{ director }}
+      {% endfor %}
+    </select>
+  
+
+    <button type="submit">Apply Filter</button>
+</form>
+  {% for movie in movies %}
+    <div class="Movie">
+      <h2><a href="{% url 'movie_detail' pk=movie.pk %}">{{ movie.title }}</a></h2>
+      <p>Movie Type: {{ movie.movie_type.name }}</p>
+      <p>IMDb Rating: {{ movie.imdb_rating }}</p>
+    </div>
+  {% endfor %}
+{% endblock content %}
