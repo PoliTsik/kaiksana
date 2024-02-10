@@ -25,12 +25,6 @@
             </div>
         </div>
     </div>
-    <script>
-        var age = prompt("Παρακαλώ εισάγετε την ηλικία σας:");
-        if (age !== null && parseInt(age) < 18) {
-            alert("Λυπούμαστε, αλλά δεν επιτρέπεται η πρόσβαση σε αυτήν την ιστοσελίδα.");
-            window.location.href = "https://www.youtube.com/watch?v=upEVUu0rTpo&t=1s";
-        }
-    </script>
+      <script src="{% static 'js/agecheck.js' %}"></script>
 </body>
 </html>
