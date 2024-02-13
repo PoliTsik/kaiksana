@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f532015-859f-4406-9e94-99922762ade8" name="Changes" comment="second commit">
-      <change afterPath="$PROJECT_DIR$/blog/migrations/0005_actor_awarded_actor_gender_alter_movie_duration_and_more.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="5f532015-859f-4406-9e94-99922762ade8" name="Changes" comment="second commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +104,7 @@
       <workItem from="1707394472221" duration="39987000" />
       <workItem from="1707487417195" duration="12787000" />
       <workItem from="1707558815043" duration="11479000" />
-      <workItem from="1707825022383" duration="687000" />
+      <workItem from="1707825022383" duration="1293000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -151,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707593414373</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="second commit">
+      <option name="closed" value="true" />
+      <created>1707826673120</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707826673121</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
